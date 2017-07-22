@@ -6,7 +6,7 @@ module Remotipart
 
     def self.included(base)
       base.class_eval do
-        alias_method_chain :render, :remotipart
+        alias_method :render, :remotipart
         before_action :set_response_content_type
       end
     end
